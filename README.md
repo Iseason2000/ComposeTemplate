@@ -6,3 +6,4 @@
 项目JDK 11
 Gradle jvm 11
 Kotlin 插件 1.5.31
+Android SDK 31
