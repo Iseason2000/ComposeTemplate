@@ -4,7 +4,6 @@ plugins {
     kotlin("multiplatform")
     id("org.jetbrains.compose") version "1.0.0-beta5"
     id("com.android.library")
-    id("kotlin-android-extensions")
 }
 
 group = "top.iseason"
@@ -23,6 +22,7 @@ kotlin {
                 api(compose.runtime)
                 api(compose.foundation)
                 api(compose.material)
+                implementation(compose.preview)
             }
         }
         val commonTest by getting {
@@ -33,7 +33,7 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 api("androidx.appcompat:appcompat:1.2.0")
-                api("androidx.core:core-ktx:1.3.2")
+                api("androidx.core:core-ktx:1.6.0")
                 api("androidx.activity:activity-compose:1.3.0-alpha04")
             }
         }
@@ -61,5 +61,8 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding = true
     }
 }

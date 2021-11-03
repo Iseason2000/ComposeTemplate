@@ -8,7 +8,6 @@ group = "top.iseason"
 version = "1.0"
 
 repositories {
-    jcenter()
 }
 
 dependencies {
@@ -32,5 +31,8 @@ android {
         getByName("release") {
             isMinifyEnabled = false
         }
+    }
+    buildFeatures {
+        viewBinding = true
     }
 }
