@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.material.MaterialTheme
 import top.iseason.common.App
 
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -13,10 +14,6 @@ class MainActivity : AppCompatActivity() {
             MaterialTheme {
                 App()
             }
-//            Image(
-//                painter = painterResource(R.drawable.background),
-//                contentDescription = "好看的壁纸",
-//            )
         }
     }
 }

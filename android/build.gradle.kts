@@ -12,6 +12,8 @@ repositories {
 
 dependencies {
     implementation(project(":common"))
+    implementation(compose.uiTooling)
+    implementation(compose.preview)
 }
 
 android {
@@ -29,7 +31,7 @@ android {
     }
     buildTypes {
         getByName("release") {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
         }
     }
     buildFeatures {
